@@ -1,0 +1,144 @@
+README
+
+			    AUDIODD Sample Template
+
+
+GENERAL:       - AudioDD is a sample physical audio device driver that
+		 outlines how an OEM will plug their audio device driver
+		 into the MMPM/2 environment.  This sample template does not
+		 communicate with an audio adapter, thus execution of such to
+		 produce sound is not possible.  However, the physical device
+		 driver will install into OS/2 2.0 and initialize itself
+		 AUDIO1$.
+
+		 Using this template as a guideline, one can insert the
+		 necessary code to communicate with a specific audio adapter
+		 and the driver will now execute in MMPM/2.
+
+
+FEATURES:      - Uses the Standard IOCTL interface and its five Audio IOCTLs.
+
+	       - Uses MMPM/2 APIs to communicate with the Sync/Stream Manager.
+
+
+CAPABILITIES:  - Demostrates the IDC (Inter-device Driver Communication) entry
+		 point to the Audio Stream Handler thru the use of the MMPM/2
+		 API SHDEntryPoint().
+
+	       - Demostrates the IDC (Inter-device Driver Communication) entry
+		 point from the Audio Stream Handler thru the use of the
+		 MMPM/2 API DDCMDEntryPoint().
+
+	       - Demostrates the protocol of getting an receiving data buffers
+		 from the Sync/Stream Manager.
+
+NOTE:	       - This device driver will not compile in the OS/2 2.0 Toolkit
+		 environment because it is a 16 bit device driver.  It is
+		 included in the MMPM/2 Toolkit to illustrate how a device
+		 driver plugs into the MMPM/2 audio subsystem.
+		 If you wish to compile this device driver, you must use the
+		 Microsoft C6 compiler, and the 6.0 Microsoft Macro Assembler.
+		 If you wish to compile this component using the above tools,
+		 following is an example of the makefile that would be needed.
+
+===============================================================================
+
+# **************************************************************************
+# *
+# * Make file for AUDIODD - IBM C language OS/2 audio device driver
+# *
+# *  Generates:
+# *	  audiodd.sys
+# *
+# **************************************************************************
+
+.SUFFIXES:
+.SUFFIXES:     .com .sys .exe .obj .mbj .asm .inc .def .lrf .crf .ref \
+               .lst .sym .map .c .h .lib .msg .pro .txt
+
+NAMESYS   = audiodd
+
+#
+# Definitions for assembler
+# ML == Microsoft MASM 6.0
+#
+ASM=ML
+AFLAGS=-c -Cx -Sn
+
+#
+# Definitions for C compiler
+#
+CCOMP=cl
+CFLAGS= /c /Zp /Zl /G2s /Asnw /W3 /O
+
+#
+# Definitions for linker
+#
+LINK=link
+LFLAGS= /B
+LIBS286=DOSCALLS+SLIBC7P+os2286
+
+
+#
+# Inference rules
+#
+.c.obj:
+     $(CCOMP) $(CFLAGS) /Fo$(<B).obj $(C_LST) $(<B).c
+
+.asm.obj:
+     $(ASM) $(AFLAGS) $(ASM_LST) $(<B).asm
+
+#
+# Object file list
+# AudioDD.obj must be last object file listed so
+# PDD Init code can be droped from code and data segments.
+#
+SYSOBJS=startup.obj	\
+        audiodat.obj    \
+        mmddcmds.obj    \
+        audintr.obj     \
+        audsubs.obj     \
+        cdevhlp.obj     \
+        audiodd.obj
+
+#
+# Target descriptions
+#
+
+all:sys
+
+##################################
+# audiodd.sys Target descriptions
+##################################
+
+sys: $(NAMESYS).sys
+
+$(NAMESYS).sys:     $(SYSOBJS) makefile $(NAMESYS).lrf	\
+                    $(NAMESYS).def
+		    $(LINK) $(LFLAGS) @$(NAMESYS).lrf
+
+$(NAMESYS).def: makefile
+	@echo Creating file <<$(@B).def
+LIBRARY $(NAMESYS)
+PROTMODE
+CODE	PRELOAD
+DATA	PRELOAD
+<<keep
+
+$(NAMESYS).lrf:  makefile
+	@echo Creating file <<$(@B).lrf
+$(SYSOBJS)
+$(NAMESYS).sys
+$(NAMESYS).map /map /nod
+$(LIBS286)
+$(NAMESYS).def;
+<<keep
+
+
+
+
+
+
+
+
+

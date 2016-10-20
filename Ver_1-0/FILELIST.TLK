@@ -1,0 +1,366 @@
+/***********************************************************************/
+/* This file contains install information.  Comments are delimited     */
+/* as these comments are.  Blank lines are ignored.  Non-blank lines   */
+/* will be parsed and extraneous characters will cause errors.  First  */
+/* non-comment line must be the total number of files to be installed. */
+/*                                                                     */
+/*   for release 1 - driver 1.0.0                                     */
+/*                                                                     */
+/* Total number of entries is 238                                      */
+/***********************************************************************/
+
+    238
+
+/***********************************************************************/
+/* all files on the install disk(s) are listed below. Other            */
+/* information is also given, as follows:                              */
+/*                                                                     */
+/* Disk#    - The number of the disk on which the file resides.        */
+/*            (Ignored if installing from CD-ROM). These are sorted    */
+/*            from 0 to the number of disks, ascending.                */
+/*                                                                     */
+/* Group#   - The logical group to which the file belongs. Group       */
+/*            starts at 0.                                             */
+/*                                                                     */
+/* Dest#    - The destination subdirectory into which the file will be */
+/*            copied.  Dest# starts at 0.                              */
+/*                                                                     */
+/* Path     - The installation disk(s) subdirectory where the file     */
+/*            resides.                                                 */
+/*                                                                     */
+/* FileName - The base filename.                                       */
+/*                                                                     */
+/* sourcedir="\\LIB\\"                = 1                              */
+/* sourcedir="\\H\\"                  = 2                              */
+/* sourcedir="\\"                     = 4                              */
+/* sourcedir="\\FSSHT\\"              = 5                              */
+/* sourcedir="\\CLOCK\\"              = 7                              */
+/* sourcedir="\\DUET2\\"              = 10                             */
+/* sourcedir="\\MCISTRNG\\"           = 11                             */
+/* sourcedir="\\INC\\"                = 13                             */
+/* sourcedir="\\BOOK\\"               = 16                             */
+/* sourcedir="\\CDMCT\\"              = 17                             */
+/* sourcedir="\\AVCINST\\"            = 18                             */
+/* sourcedir="\\CASECONV\\"           = 19                             */
+/* sourcedir="\\ADMCT\\"              = 20                             */
+/* sourcedir="\\AUDIODD\\"            = 21                             */
+/*                                                                     */
+/* sourcedir="\\DUET1\\"              = 31                             */
+/* sourcedir="\\DUET1\\"              = 32                             */
+/* sourcedir="\\DUET1\\"              = 33                             */
+/* sourcedir="\\DUET1\\"              = 34                             */
+/*                                                                     */
+/* destindir="\\MMOS2\\"                                = 0            */
+/* destindir="\\MMOS2\\MMTOOLKT\\LIB\\"                 = 1            */
+/* destindir="\\MMOS2\\DLL\\"                           = 2            */
+/* destindir="\\MMOS2\\INSTALL\\"                       = 4            */
+/* destindir="\\MMOS2\\HELP\\"                          = 7            */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\DUET2\\"      = 10           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\MCISTRNG\\"   = 11           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\CF\\"         = 12           */
+/* destindir="\\MMOS2\\MMTOOLKT\\INC\\"                 = 13           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\BOOK\\"       = 16           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\CDMCT\\"      = 17           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\AVCINST\\"    = 18           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\CASECONV\\"   = 19           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\ADMCT\\"      = 20           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\AUDIODD\\"    = 21           */
+/* destindir="\\MMOS2\\MMTOOLKT\\H\\"                   = 22           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\FSSHT\\"      = 25           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\CLOCK\\"      = 27           */
+/* destindir="\\MMOS2\\MMTOOLKT\\SAMPLES\\DUET1\\"      = 28           */
+/*                                                                     */
+/*        groups                                                       */
+/*            - 4  = Case Converter I/O Procedure                      */
+/*            - 5  = Toolkit Stream Handler DLL Example                */
+/*            - 6  = AVC I/O Procedure Installation Utility            */
+/*            - 7  = Clock Utility                                     */
+/*            - 8  = MIDI convertor routine                            */
+/*            - 9  = Duet Player I                                     */
+/*            - 10 = Duet Player II                                    */
+/*            - 11 = MCI String Test                                   */
+/*            - 12 = Header Files, Include Files and Libraries         */
+/*            - 13 = Program Reference                                 */
+/*            - 14 = Audio Device Driver Template                      */
+/*                                                                     */
+/* Disk# Group# Dest#  Path   FileName                                 */
+/***********************************************************************/
+
+/*            mmtoolkt\samples\cf  11   41K           */
+    0    0   12    4   "CONTROL.SCR"
+    0    0   12    4   "FILELIST.TLK"
+    0    0   12    4   "TLKCLOCK.SCR"
+    0    0   12    4   "TLKIOPU.SCR"
+    0    0   12    4   "TLKCONV.SCR"
+    0    0   12    4   "TLKSTRN.SCR"
+    0    0   12    4   "TLKDUT1.SCR"
+    0    0   12    4   "TLKDUT2.SCR"
+    0    0   12    4   "TLKBOOKR.SCR"
+    0    0   12    4   "TLKBASE.SCR"
+
+    0    0   4     4   "TLKCLOCK.SCR"
+    0    0   4     4   "TLKIOPU.SCR"
+    0    0   4     4   "TLKCONV.SCR"
+    0    0   4     4   "TLKSTRN.SCR"
+    0    0   4     4   "TLKDUT1.SCR"
+    0    0   4     4   "TLKDUT2.SCR"
+    0    0   4     4   "TLKBOOKR.SCR"
+    0    0   4     4   "TLKBASE.SCR"
+    0    0   4     4   "SYSLEVEL.TLK"
+
+    0    0   4     4   "AVCINST.ICO"
+    0    0   4     4   "CLOCK.ICO"
+    0    0   4     4   "DUET1.ICO"
+    0    0   4     4   "DUET2.ICO"
+    0    0   4     4   "MCISTRNG.ICO"
+    0    0   4     4   "MIDICONV.ICO"
+    0    0   4     4   "MMPMDATA.ICO"
+    0    0   4     4   "MMPMREF.ICO"
+    0    0   4     4   "MMTOOLKT.ICO"
+
+    0    0  12     4   "TOOLKIT.CH"
+    0    0  12     4   "TLKBOOKR.CH"
+
+/*            mmtoolkt\inc     10  100K    */
+    0   12   13   13   "ACB.INC"
+    0   12   13   13   "AUDIO.INC"
+    0   12   13   13   "DCB.INC"
+    0   12   13   13   "EVCB.INC"
+    0   12   13   13   "HHPHEAP.INC"
+    0   12   13   13   "MEERROR.INC"
+    0   12   13   13   "OS2MEDEF.INC"
+    0   12   13   13   "SHDD.INC"
+    0   12   13   13   "SPCB.INC"
+    0   12   13   13   "SSM.INC"
+
+/*            mmtoolkt\lib      1   21K       */
+    0   12    1    1   "MMPM2.LIB"
+
+/*           mmtoolkt\h         23  300K   */
+    0   12   22    2   "ACB.H"
+    0   12   22    2   "AUDIO.H"
+    0   12   22    2   "CDAUDIO.H"
+    0   12   22    2   "DCB.H"
+    0   12   22    2   "EVCB.H"
+    0   12   22    2   "MCD.H"
+    0   12   22    2   "MCIDRV.H"
+    0   12   22    2   "MEERROR.H"
+    0   12   22    2   "MIDI.H"
+    0   12   22    2   "MIDITYPE.H"
+    0   12   22    2   "MINSTALL.H"
+    0   12   22    2   "MMIO.H"
+    0   12   22    2   "MMSYSTEM.H"
+    0   12   22    2   "OS2ME.H"
+    0   12   22    2   "OS2MEDEF.H"
+    0   12   22    2   "SHDD.H"
+    0   12   22    2   "SPCB.H"
+    0   12   22    2   "SSM.H"
+    0   12   22    2   "SW.H"
+
+/*    mmtoolkt\samples\duet2       21    532k  */
+    0   10   10   10   "duet2.c"
+    0   10   10   10   "duet2.h"
+    0   10   10   10   "duet2.rc"
+    0   10   10   10   "duet2.dlg"
+    0   10   10   10   "duet2.def"
+    0   10   10   10   "makefile"
+    0   10   10   10   "duet2.exe"
+    0   10   10   10   "duet2.ipf"
+    0   10   10   10   "duet2.ico"
+    0   10   10   10   "duet2.hlp"
+    0   10   10   10   "duethelp.wav"
+    0   10   10   10   "duet2.wav"
+
+    0   10   10   10   "play0.bmp"
+    0   10   10   10   "play1.bmp"
+    0   10   10   10   "play2.bmp"
+    0   10   10   10   "play3.bmp"
+    0   10   10   10   "play4.bmp"
+    0   10   10   10   "pause.bmp"
+    0   10   10   10   "stop.bmp"
+
+/*           mmtoolkt\samples\avcinst  10    90K   */
+    0    6   18   18   "avcinst.dlg"
+    0    6   18   18   "avcinst.def"
+    0    6   18   18   "avcinst.ipf"
+    0    6   18   18   "avcinst.c"
+    0    6   18   18   "avcinst.ico"
+    0    6   18   18   "makefile"
+    0    6   18   18   "avcinst.rc"
+    0    6   18   18   "avcinst.h"
+    0    6   18   18   "avcinst.exe"
+    0    6   18   18   "avcinst.hlp"
+
+/*           mmtoolkt\samples\caseconv  12  113K      */
+    0    4   19   19   "convcvsr.c"
+    0    4   19   19   "convproc.rc"
+    0    4   19   19   "convconv.c"
+    0    4   19   19   "convproc.c"
+    0    4   19   19   "convproc.h"
+    0    4   19   19   "makefile"
+    0    4   19   19   "convproc.dll"
+    0    4   19   19   "convproc.lib"
+    0    4   19   19   "hhpheap.c"
+    0    4   19   19   "hhpheap.h"
+
+/*           mmtoolkt\samples\fssht    24   229K      */
+    0    5   25    5   "fsshass.c"
+    0    5   25    5   "fsshcrea.c"
+    0    5   25    5   "fsshgdat.c"
+    0    5   25    5   "fsshread.c"
+    0    5   25    5   "fsshseek.c"
+    0    5   25    5   "fsshwrit.c"
+    0    5   25    5   "fssh.h"
+    0    5   25    5   "fssht.dll"
+    0    5   25    5   "hhpheap.h"
+    0    5   25    5   "hhpheap.c"
+    0    5   25    5   "makefile"
+    0    5   25    5   "shdestry.c"
+    0    5   25    5   "sheprot.c"
+    0    5   25    5   "shgprot.c"
+    0    5   25    5   "shi.h"
+    0    5   25    5   "shioutil.c"
+    0    5   25    5   "shiprot.c"
+    0    5   25    5   "shmisc.c"
+    0    5   25    5   "shnegot.c"
+    0    5   25    5   "shrouter.c"
+    0    5   25    5   "shstart.c"
+    0    5   25    5   "shstop.c"
+    0    5   25    5   "shinit.c"
+
+/*                            midiconv  2    38K    */
+    0    8    7    4   "midiconv.hlp"
+    0    8    0    4   "midiconv.exe"
+
+/*           mmtoolkt\samples\mcistrng  14   168K   */
+    0   11   11   11   "mcistrng.c"
+    0   11   11   11   "mcistrng.h"
+    0   11   11   11   "mcistrng.rc"
+    0   11   11   11   "mcistrng.dlg"
+    0   11   11   11   "mcistrng.def"
+    0   11   11   11   "makefile"
+    0   11   11   11   "mcistrng.exe"
+    0   11   11   11   "mcistr1.hlp"
+    0   11   11   11   "mcistr2.hlp"
+    0   11   11   11   "mcistr3.hlp"
+    0   11   11   11   "mcistr1.ipf"
+    0   11   11   11   "mcistr2.ipf"
+    0   11   11   11   "mcistr3.ipf"
+    0   11   11   11   "mcistrng.ico"
+
+/*           mmtoolkt\samples\clock     20    820K   */
+    0    7   27    7   "clock.c"
+    0    7   27    7   "clock.h"
+    0    7   27    7   "clock.rc"
+    0    7   27    7   "clock.dlg"
+    0    7   27    7   "clockdrw.c"
+    0    7   27    7   "clock.def"
+    0    7   27    7   "clock.hlp"
+    0    7   27    7   "makefile"
+    0    7   27    7   "clock.exe"
+    0    7   27    7   "clock.ipf"
+    0    7   27    7   "clock.ico"
+    0    7   27    7   "clock1.wav"
+    0    7   27    7   "clock2.wav"
+    0    7   27    7   "clock3.wav"
+    0    7   27    7   "bellc.bmp"
+    0    7   27    7   "bellfrlt.bmp"
+    0    7   27    7   "bellfrrt.bmp"
+    0    7   27    7   "belllt.bmp"
+    0    7   27    7   "bellrt.bmp"
+
+/*       mmtoolkt\samples\book         2    381K    */
+    0   13   16   16   "mmprog.ndx"
+    0   13   16   16   "mmprog.inf"
+
+    0    9   28   32   "ps2it1.wav"
+    0    9   28   32   "ps2it2.wav"
+
+    0    9   28   33   "bod2.wav"
+    0    9   28   33   "bod1.wav"
+
+    0    9   28   34   "ode1.wav"
+    0    9   28   34   "ode2.wav"
+
+/*       mmtoolkt\samples\duet1       29   4405K     */
+    0    9   28   31   "duet1.c"
+    0    9   28   31   "duet1.def"
+    0    9   28   31   "duet1.dlg"
+    0    9   28   31   "duet1.exe"
+    0    9   28   31   "duet1.h"
+    0    9   28   31   "duet1.hlp"
+    0    9   28   31   "duet1.ico"
+    0    9   28   31   "duet1.ipf"
+    0    9   28   31   "duet1.rc"
+    0    9   28   31   "duethelp.wav"
+    0    9   28   31   "makefile"
+
+    0    9   28   31   "play0.bmp"
+    0    9   28   31   "play1.bmp"
+    0    9   28   31   "play2.bmp"
+    0    9   28   31   "play3.bmp"
+    0    9   28   31   "play4.bmp"
+    0    9   28   31   "pause.bmp"
+    0    9   28   31   "stop.bmp"
+    0    9   28   31   "rew.bmp"
+    0    9   28   31   "fastf.bmp"
+    0    9   28   31   "rec0.bmp"
+    0    9   28   31   "rec1.bmp"
+    0    9   28   31   "trackf.bmp"
+    0    9   28   31   "trackb.bmp"
+    0    9   28   31   "load.bmp"
+    0    9   28   31   "unload.bmp"
+    0    9   28   31   "stepf.bmp"
+    0    9   28   31   "stepb.bmp"
+    0    9   28   31   "muteup.bmp"
+    0    9   28   31   "mutedn.bmp"
+
+/*       mmtoolkt\samples\cdmct       15    478K   */
+    0   10   17   17   "ibmcdrom.c"
+    0   10   17   17   "cdaudpro.c"
+    0   10   17   17   "cdaudio.c"
+    0   10   17   17   "cdaudutl.c"
+    0   10   17   17   "cdmccomn.c"
+    0   10   17   17   "ibmcdrom.h"
+    0   10   17   17   "cdaudibm.h"
+    0   10   17   17   "makefile"
+    0   10   17   17   "ibmcdrt.dll"
+    0   10   17   17   "cdaudiot.dll"
+    0   10   17   17   "hhpheap.c"
+    0   10   17   17   "hhpheap.h"
+    0   10   17   17   "cdmcinit.c"
+    0   10    2   17   "ibmcdrt.dll"
+    0   10    2   17   "cdaudiot.dll"
+
+/*       mmtoolkt\samples\admct       17    705K     */
+    0    5   20   20   "admcdat.c"
+    0    5   20   20   "admcinit.c"
+    0    5   20   20   "admcload.c"
+    0    5   20   20   "admcrest.c"
+    0    5   20   20   "admcstgc.c"
+    0    5   20   20   "audiomcd.c"
+    0    5   20   20   "hhpheap.c"
+    0    5   20   20   "hhpheap.h"
+    0    5   20   20   "admcplay.c"
+    0    5   20   20   "admcrecd.c"
+    0    5   20   20   "audiosub.c"
+    0    5   20   20   "makefile"
+    0    5   20   20   "audiomcd.h"
+    0    5   20   20   "audiomct.dll"
+    0    5   20   20   "admcfunc.h"
+    0    5   20   20   "admcdat.h"
+    0    5   20   20   "mcipriv.h"
+
+/*       mmtoolkt\samples\audiodd     11    95K     */
+    0   14   21   21   "audiodd.c"
+    0   14   21   21   "audintr.c"
+    0   14   21   21   "mmddcmds.c"
+    0   14   21   21   "audiodat.c"
+    0   14   21   21   "audsubs.c"
+    0   14   21   21   "audiodd.h"
+    0   14   21   21   "cdevhlp.h"
+    0   14   21   21   "audsubs.h"
+    0   14   21   21   "cdevhlp.asm"
+    0   14   21   21   "startup.asm"
+    0   14   21   21   "readme"
+

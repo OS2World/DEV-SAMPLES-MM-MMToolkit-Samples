@@ -1,0 +1,167 @@
+/*************************************************************************
+ * File Name   : MCISTRNG.RC
+ *
+ * Description : This is the resource file for the MCISTRNG program.
+ *
+ * Concepts    : See the C source file for this program.
+ *
+ * MMPM/2 API's: See the C source file for this program.
+ *
+ * Required
+ *    Files    : See the C source file for this program.
+ *
+ * Copyright (C) IBM October 1991
+ *************************************************************************/
+
+#define  INCL_WIN
+#define  INCL_PM
+#define  INCL_DOS
+#include <os2.h>
+
+#include "MCISTRNG.H"
+
+RCINCLUDE MCISTRNG.DLG
+
+ICON ID_ICON MCISTRNG.ICO
+
+/*
+ * Help Table Definitions.
+ *
+ * The help table definition for the dialog windows.
+ * - Main
+ * - Include
+ * - Display
+ */
+
+HELPTABLE ID_MCI_STRING_MAIN_DIALOG_HELPTABLE
+{
+    HELPITEM ID_MAIN_DIALOG_BOX,      0,                   0
+    HELPITEM ID_MESSAGE_BOX,          SUBTABLE_MESSAGEBOX, ID_MESSAGE_BOX
+}
+
+HELPTABLE ID_MCI_STRING_DISPLAY_DIALOG_HELPTABLE
+{
+    HELPITEM ID_DISPLAY_DIALOG_BOX,   0,                   0
+    HELPITEM ID_MESSAGE_BOX,          SUBTABLE_MESSAGEBOX, ID_MESSAGE_BOX
+}
+
+HELPTABLE ID_MCI_STRING_INCLUDE_DIALOG_HELPTABLE
+{
+    HELPITEM ID_INCLUDE_DIALOG_BOX,   0,                   0
+    HELPITEM ID_MESSAGE_BOX,          SUBTABLE_MESSAGEBOX, ID_MESSAGE_BOX
+}
+
+HELPSUBTABLE SUBTABLE_MESSAGEBOX
+{
+}
+
+
+/*
+ * String Table Definition.
+ */
+STRINGTABLE
+{
+   IDS_MAIN_WINDOW_TITLE,
+   "Media Control Interface String Test"
+
+   IDS_MAIN_HELP_WINDOW_TITLE,
+   "String Test Help Window"
+
+   IDS_INCLUDE_HELP_WINDOW_TITLE,
+   "Include Messages Help Window"
+
+   IDS_DISPLAY_HELP_WINDOW_TITLE,
+   "Display Messages Help Window"
+
+   IDS_NORMAL_ERROR_MESSAGE_BOX_TEXT,
+   "String Test Error"
+
+   IDS_MAIN_HELP_CREATION_FAILED,
+   "Help could not be initialized for the Media Control "
+   "Interface String Test window.  Help will not be "
+   "available."
+
+   IDS_INCLUDE_HELP_CREATION_FAILED,
+   "Help could not be initialized for the Include window.  Help will not "
+   "be available."
+
+   IDS_DISPLAY_HELP_CREATION_FAILED,
+   "Help could not be initialized for the Display Messages window.  Help "
+   "will not be available."
+
+   IDS_MAIN_HELP_LIBRARY_FILE,
+   "MCISTR1.HLP"
+
+   IDS_DISPLAY_HELP_LIBRARY_FILE,
+   "MCISTR2.HLP"
+
+   IDS_INCLUDE_HELP_LIBRARY_FILE
+   "MCISTR3.HLP"
+
+   IDS_MCI_STRING_HAS_NO_SIZE,
+   "The Send String entry field is blank.  Please type a valid string "
+   "command and retry."
+
+   IDS_MCI_GETTING_STRING_ERROR_FAILED,
+   "The specified string command was not a valid command. "
+   "Please type a valid string command and retry."
+
+   IDS_ALL_CHECKBOXES_ARE_FALSE,
+   "No check boxes are selected.  No notification messages will be displayed "
+   "in the Display Messages dialog window."
+
+   IDS_MM_MCINOTIFY,
+   "MM_MCINOTIFY"
+
+   IDS_MM_MCIPASSDEVICE,
+   "MM_MCIPASSDEVICE"
+
+   IDS_MM_MCIPOSITIONCHANGE,
+   "MM_MCIPOSITIONCHANGE"
+
+   IDS_MM_MCIEVENT,
+   "MM_MCIEVENT"
+
+   IDS_MM_MCICUEPOINT,
+   "MM_MCICUEPOINT"
+
+   IDS_MM_MCIPLAYLISTMESSAGE,
+   "MM_MCIPLAYLISTMESSAGE"
+
+   IDS_MCI_NOTIFY_SUCCESSFUL,
+   "   MCI_NOTIFY_SUCCESSFUL"
+
+   IDS_MCI_NOTIFY_SUPERSEDED,
+   "   MCI_NOTIFY_SUPERSEDED"
+
+   IDS_MCI_NOTIFY_ABORTED,
+   "   MCI_NOTIFY_ABORTED"
+
+   IDS_MCI_NOTIFY_ERROR,
+   "   MCI_NOTIFY_ERROR = "
+
+   IDS_DEVICE_ID
+   "   Device ID = "
+
+   IDS_USER_PARM
+   "   User parameter = "
+
+   IDS_GAINING_USE
+   "   Gaining use of device"
+
+   IDS_LOSING_USE
+   "   Losing use of device"
+
+   IDS_TIME
+   "   Time = "
+
+   IDS_CMD_MSG
+   "   Command message was "
+
+   IDS_DEFAULTSIZE
+   "~Default Size"
+
+   IDS_RETURN_STRING
+   "Return string = "
+}
+

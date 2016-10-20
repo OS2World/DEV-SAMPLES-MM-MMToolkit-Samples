@@ -1,0 +1,40 @@
+                        OS/2 SMP Comdex
+ 
+                           README.SMP
+ 
+    OS/2 SMP Comdex is the level of code that was
+    demonstrated at Comdex, Fall 1993.  
+ 
+    For information related to OS/2 SMP, monitor CompuServe
+    under The Developer Connection section in the OS2DF2 
+    forum.  Through this forum, you can submit any questions
+    or comments to The Developer Connection team.
+ 
+    This level of code is supported only on the following
+    systems:  
+ 
+       -  Wyse 7000i
+       -  AST Manhattan
+       -  ALR Provesia
+       -  Compaq Proliant
+       -  Everex DP
+       -  Tricord Powerframe
+ 
+ 
+                       Installation Notes
+  
+    o  To install this product, use the OS/2 2.1 
+       installation process.
+ 
+    o  You do not have to format the boot drive if you are
+       installing this product over a general release 
+       version of OS/2.  However, if you encounter a
+       problem, formatting might be necessary.  You do have 
+       to format the drive if you are installing over a
+       Beta version.
+ 
+    o  If an application doesn't work, switch to 
+       uni-processor mode.
+ 
+ 
+

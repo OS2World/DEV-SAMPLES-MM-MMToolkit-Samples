@@ -1,0 +1,124 @@
+                      U.S. 101 KEYBOARD SUPPORT
+
+
+SHIFT STATUS AND INPUT MODE CHANGE KEYS
+
+
+OPERATION               JAPANESE KBD            PS/2 1-1 KBD
+                        (5576-A01)
+
+
+Alphanumeric            Alphanumeric            Shift + Caps
+
+Katakana                Shift + Hiragana        Alt + Caps
+
+Hiragana                Hiragana                Ctrl + Caps
+
+SBCS/DBCS               SBCS/DBCS               Ctrl + Back Quote
+
+Roman/Kana Input        Alt + Hiragana          Alt + Ctrl + Caps
+
+Kana Kanji              Alt + SBCS/DBCS         Alt + Back Quote
+Conversion Mode
+
+Kanji Code Input        Alt + Alphanumeric      Alt + Shift + Caps
+
+Kana to Kanji           Alt + Ctrl +            Alt + Ctrl +
+Control Mode            SBCS/DBCS               Back Quote
+
+
+
+KEY ASSIGNMENTS FOR KANA KANJI CONVERSION (KKC)
+
+
+OPERATION               JAPANESE KBD            PS/2 1-1 KBD
+                        (5576-A01)
+
+
+Conversion              Conversion              Space
+
+No Conversion           No Conversion           Ctrl + Space
+
+Previous Candidate      Shift + Conversion      Shift + Space
+
+All Candidate           Alt + Conversion        Shift + Ctrl + Space
+
+No MKK Conversion       Alt + No Conversion     Shirt + F3
+
+Single Kanji            Ctrl + No Conversion    Ctrl + F3
+Conversion
+
+
+
+Note:  A DBCS application for PS/2 has to avoid hard coding the above
+       combinations.
+
+ _______________________________________________________________________________
+
+ Official Registered Dealers of IBM Japan, Ltd. in the U.S.
+
+ M.I.S.I. Company Ltd.
+          New York Location                  New Jersey Location
+          350 Park Avenue                    One International Blue, Ste 305
+          New York, NY  10022                Mahway, NJ  07495
+          Phone: 212.355.5585                Phone:  201.529.0480
+          Fax:   212.355.0357                Fax:    201.661.0880
+
+          Atlanta Location                   San Francisco Location
+          2395 Pleasantdale Road, Ste 3      1001 Bayhill Dr., Ste 220
+          Doraville, GA  30340               San Bruno, CA  94006
+          Phone:  404.840.1060               Phone:  415.873.9100
+          Fax:    404.840.1062               Fax:    415.873.4640
+
+          Los Angeles Location
+          1999 West 190th St.
+          Torrance, CA  90504
+          Phone:  310.516.1402
+          Fax:    310.516.6040
+
+
+ NDK International Inc.
+          1211 Avenue of the Americas, 41st Floor
+          New York, NY  10036
+          Phone:  212.704.6884
+          Fax:    212.704.6959
+
+
+ Susteen Computer Communication
+          1735 West Carson Street, #A
+          Torrance, CA  90501
+          Phone:  310.787.1589
+          Fax:    310.787.1590
+
+ Telcomet Inc.
+          245 Park Avenue, 24th Floor
+          New York, NY  10167
+          Phone:  212.297.1000
+          Fax:    212.557.0140
+
+ Unitrendix Management Co., Inc.
+          19300 South Hamilton Avenue, #165
+          Gardena, CA  90245
+          Phone:  310.329.3265
+          Fax:    310.329.3601
+
+
+
+ U.S. Dealer Handling Chinese Products
+
+ Chase Computers
+          210 East Main Street
+          Alhambra, CA  91801
+          Phone:  818.300.8666
+          Fax:    818.300.8693
+
+
+
+ U.S. Dealer Handling Korean Products
+
+ Computer Plus
+          3850 Wilshire Boulevard, #104
+          Los Angeles, CA  90010
+          Phone:  213.480.6777
+          Fax:    213.480.6701
+

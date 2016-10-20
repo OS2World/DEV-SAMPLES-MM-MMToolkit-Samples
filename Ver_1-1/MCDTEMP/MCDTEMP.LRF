@@ -1,0 +1,5 @@
+ mcdproc.obj mcdopen.obj mcdclose.obj mcddrvsv.obj mcddrvrt.obj mcdstat.obj mcdinfo.obj mcdfuncs.obj
+ mcdtemp.dll
+ mcdtemp.map /map /nod /noi
+ OS2386.LIB DDE4MBS.LIB MMPM2.LIB
+ mcdtemp.def;

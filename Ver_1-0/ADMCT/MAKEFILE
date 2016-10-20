@@ -1,0 +1,89 @@
+# SCCSID = @(#)makefile	13.8 92/04/23
+# SCCSID = @(#)makefile	13.8 92/04/23
+#################################################################################
+#										#
+# Makefile for OS/2 MMPM/2 WAVEFORM Audio MCI Driver				#
+#										#
+#   Generates One DLL:								#
+#	      Audiomct.DLL - Ring 3 Audio MCI Driver				#
+#										#
+# Copyright (c) IBM Corporation  1991						#
+# All Rights Reserved								#
+#################################################################################
+
+
+.SUFFIXES:
+.SUFFIXES: .com .sys .exe .obj .mbj .asm .inc .def .lrf .crf .ref \
+           .lst .sym .map .c .h .lib .msg .txt .cvk
+
+NAMEDLL=audiomct
+
+#################################
+# Definitions for C Compiler
+#################################
+CCOMP=icc
+CFLAGS= /C /Gs- /Ki- /W3 /Ss+ /C+ /Ge- /Ms /Gd- /Gm+ /DINCL_32
+DEBUG	   = /Ti+ /O-
+
+#################################
+# Definitions for linker
+#################################
+LINK386=link386
+MAP = mapsym $(NAMEDLL)
+LIBS386 = OS2386.LIB DDE4MBS.LIB DDE4MBM.LIB mmpm2.lib
+
+
+#################################
+# Inference Rules
+#################################
+.c.obj:
+	$(CCOMP) $(CFLAGS) /Fo$(<R).obj $(C_LST) $(<R).c
+
+#################################
+# Object file lists
+#################################
+
+DLLOBJS=admcdat.obj  \
+        admcinit.obj \
+        admcstgc.obj \
+        admcrest.obj \
+        admcload.obj \
+        admcrecd.obj \
+        admcplay.obj \
+        audiosub.obj \
+        audiomcd.obj \
+        hhpheap.obj
+
+#################################
+# Target Descriptions
+#################################
+all: dll
+
+##################################
+# audiomcd Target Descriptions
+##################################
+dll: $(NAMEDLL).dll
+
+$(NAMEDLL).dll:   $(DLLOBJS) makefile	   $(NAMEDLL).lrf	   \
+                  $(NAMEDLL).def
+		  $(LINK386) @$(NAMEDLL).lrf
+		  $(MAP)
+
+$(NAMEDLL).def: makefile
+	@echo Creating file <<$(@B).def
+
+ LIBRARY AUDIOMCT INITINSTANCE
+ DATA MULTIPLE NONSHARED
+ HEAPSIZE	   44120
+ STACKSIZE	   53000
+ EXPORTS   mciDriverEntry
+<<keep
+
+$(NAMEDLL).lrf: makefile
+	@echo Creating file <<$(@B).lrf
+ $(DLLOBJS)
+ $(NAMEDLL).dll
+ $(NAMEDLL).map /map /nod /noi
+ $(LIBS386)
+ $(NAMEDLL).def;
+<<keep

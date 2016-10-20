@@ -1,0 +1,140 @@
+         /* driver 1.0.0 - Rel 1   Toolkit */
+
+package="IBM Multimedia Presentation Manager Toolkit/2"
+codepage=437
+filelist="filelist.tlk"
+groupcount=12
+munitcount=1
+medianame="IBM Multimedia Presentation Manager Toolkit/2 Installation Diskette 1"
+
+sourcedir = "\\LIB\\"                          = 1
+sourcedir = "\\H\\"                            = 2
+sourcedir = "\\"                               = 4
+sourcedir = "\\FSSHT\\"                        = 5
+sourcedir = "\\CLOCK\\"                        = 7
+sourcedir = "\\DUET2\\"                        = 10
+sourcedir = "\\MCISTRNG\\"                     = 11
+sourcedir = "\\INC\\"                          = 13
+sourcedir = "\\BOOK\\"                         = 16
+sourcedir = "\\CDMCT\\"                        = 17
+sourcedir = "\\AVCINST\\"                      = 18
+sourcedir = "\\CASECONV\\"                     = 19
+sourcedir = "\\ADMCT\\"                        = 20
+sourcedir = "\\AUDIODD\\"                      = 21
+
+sourcedir = "\\DUET1\\"                        = 31
+sourcedir = "\\DUET1\\"                        = 32
+sourcedir = "\\DUET1\\"                        = 33
+sourcedir = "\\DUET1\\"                        = 34
+
+destindir = "\\MMOS2\\DLL\\"                           = 2
+destindir = "\\MMOS2\\HELP\\"                          = 7
+destindir = "\\MMOS2\\"                                = 0
+destindir = "\\MMOS2\\INSTALL\\"                       = 4
+destindir = "\\MMOS2\\MMTOOLKT\\LIB\\"                 = 1
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\DUET2\\"      = 10
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\MCISTRNG\\"   = 11
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\CF\\"         = 12
+destindir = "\\MMOS2\\MMTOOLKT\\INC\\"                 = 13
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\BOOK\\"       = 16
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\CDMCT\\"      = 17
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\AVCINST\\"    = 18
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\CASECONV\\"   = 19
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\ADMCT\\"      = 20
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\AUDIODD\\"    = 21
+destindir = "\\MMOS2\\MMTOOLKT\\H\\"                   = 22
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\FSSHT\\"      = 25
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\CLOCK\\"      = 27
+destindir = "\\MMOS2\\MMTOOLKT\\SAMPLES\\DUET1\\"      = 28
+
+ssgroup=0               /*  base group */
+sssize=41
+ssname="mmbase"
+ssversion="1.0.0"
+ssinich="TLKBASE.SCR"
+
+/*           - 4 = caseconv   */
+ssgroup=4
+ssname="Case Converter I/O Procedure"
+ssversion="1.0.0"
+sssize=84
+ssicon="mmpmdata.ico"
+
+/*           - 5 = fssht and admct     */
+ssgroup=5
+ssname="Media Driver and Stream Handler Examples"
+ssversion="1.0.0"
+sssize=705
+ssicon="mmpmdata.ico"
+
+/*           - 6 = avcinst   */
+ssgroup=6
+ssname="AVC I/O Procedure Installation Utility"
+ssversion="1.0.0"
+sssize=90
+ssinich="TLKIOPU.SCR"
+ssicon="avcinst.ico"
+
+/*           - 7  = clock    */
+ssgroup=7
+ssname="Clock Utility"
+ssversion="1.0.0"
+sssize=820
+ssinich="TLKCLOCK.SCR"
+ssicon="clock.ico"
+
+/*           - 8  = midiconv  */
+ssgroup=8
+ssname="MIDI File Format Converter"
+ssversion="1.0.0"
+sssize=38
+ssinich="TLKCONV.SCR"
+ssicon="midiconv.ico"
+
+/*           - 9  = duet1   */
+ssgroup=9
+ssname="Duet Player I"
+ssversion="1.0.0"
+sssize=4425
+ssinich="TLKDUT1.SCR"
+ssicon="duet1.ico"
+
+/*           - 10 = duet2     */
+ssgroup=10
+ssname="Duet Player II"
+ssversion="1.0.0"
+sssize=540
+ssinich="TLKDUT2.SCR"
+ssicon="duet2.ico"
+
+/*           - 11 = mcistrng */
+ssgroup=11
+ssname="Media Control Interface String Test"
+ssversion="1.0.0"
+sssize=168
+ssinich="TLKSTRN.SCR"
+ssicon="mcistrng.ico"
+
+/*           - 12 = inc, lib, and h   */
+ssgroup=12
+ssname="Header Files, Include Files and Libraries"
+ssversion="1.0.0"
+sssize=421
+ssconfigch="TOOLKIT.CH"
+ssicon="mmpmdata.ico"
+
+/*           - 13 = prog ref   */
+ssgroup=13
+ssname="Program Reference"
+ssversion="1.0.0"
+sssize=380
+ssinich="TLKBOOKR.SCR"
+ssicon="mmpmref.ico"
+ssconfigch="TLKBOOKR.CH"
+
+/*           - 14 = audiodd     */
+ssgroup=14
+ssname="Audio Device Driver Template"
+ssversion="1.0.0"
+sssize=95
+ssicon="mmpmdata.ico"

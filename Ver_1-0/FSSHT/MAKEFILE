@@ -1,0 +1,111 @@
+# SCCSID = @(#)makefile	13.6 92/04/23
+#################################################################################
+#
+# Makefile for Toolkit File System Stream Handler
+#
+#   Generates one dll:
+#	  fssht.dll	     - File System Stream Handler Dll
+#
+#
+# Copyright (c) IBM Corporation  1990, 1991
+# All Rights Reserved
+#
+#################################################################################
+
+.SUFFIXES: .com .sys .exe .obj .mbj .asm .inc .def .lrf .crf .ref \
+           .lst .sym .map .c .h .lib .msg .pro .txt
+
+NAMEDLL=FSSHT
+
+#################################
+# Definitions for C Compiler
+#################################
+
+CC=icc
+CFLAGS= /Rn /C /Gs- /Ki- /W3 /Ss+ /C+ /Ge- /Ms /Gd- /Gm- /DINCL_32
+
+#################################
+# Definitions for linker
+#################################
+LINK=link386
+MAP = mapsym $(NAMEDLL)
+LFLAGS= /batch /noe /map /nod /noi
+LIBS=os2386.lib DDE4NBS.LIB MMPM2.LIB
+
+#################################
+# Inference Rules
+#################################
+.c.obj:
+	$(CC) $(CFLAGS) /Fo$(<R).obj $(C_LST) $(<R).c
+
+#################################
+# Object file lists
+#################################
+
+DLLOBJ1 = fsshread.obj \
+          fsshwrit.obj \
+          shioutil.obj \
+          shmisc.obj   \
+          shrouter.obj \
+          shstart.obj  \
+          shstop.obj   \
+          fsshseek.obj \
+          fsshass.obj  \
+          hhpheap.obj
+DLLOBJ2 = fsshcrea.obj \
+          shnegot.obj  \
+          shdestry.obj \
+          shgprot.obj  \
+          sheprot.obj  \
+          shiprot.obj  \
+          shinit.obj   \
+
+LINKOBJS = fsshgdat.obj
+
+
+#################################
+# Target Descriptions
+#################################
+all: dll
+
+#################################
+# fssht.dll Target Descriptions
+#################################
+
+dll: $(NAMEDLL).dll
+
+$(NAMEDLL).dll:   $(DLLOBJ1) $(DLLOBJ2) fsshgdat.obj makefile $(NAMEDLL).lrf $(NAMEDLL).def
+	$(LINK)  @$(NAMEDLL).lrf
+	$(MAP)
+
+fsshgdat.obj:
+	$(CC) $(CFLAGS) fsshgdat.c
+
+
+$(NAMEDLL).def: makefile
+	@echo Creating file <<$(@B).def
+LIBRARY FSSHT INITINSTANCE
+DATA MULTIPLE NONSHARED
+PROTMODE
+SEGMENTS
+   FSSH_SHR	  CLASS 'DATA' SHARED
+   FSSH_SHR_CONST CLASS 'FAR_DATA' SHARED
+   FSSH_SHR_BSS   CLASS 'FAR_DATA' SHARED
+HEAPSIZE 0
+<<keep
+
+$(NAMEDLL).lrf: makefile
+	@echo Creating file <<$(@B).lrf
+$(DLLOBJ1)+
+$(DLLOBJ2)+
+$(LINKOBJS)
+$(NAMEDLL).dll
+$(NAMEDLL).map $(LFLAGS)
+$(LIBS)
+$(NAMEDLL).def;
+<<keep
+
+
+
+
+
